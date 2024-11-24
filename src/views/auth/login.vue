@@ -48,9 +48,6 @@ const login = async () => {
     .catch(error => {
         //assign validation value with error
         validation.value = error
-
-        //assign loginFailed value with error
-        // loginFailed.value = error.response.data
     })
 
 }
