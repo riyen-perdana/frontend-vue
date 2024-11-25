@@ -28,8 +28,26 @@ const routes = [
         path: '/admin/dashboard',
         name: 'dashboard',
         component: () => import('../views/admin/dashboard/index.vue'),
-        meta: { requiresAuth: true } // <-- Add meta field
+        meta: { requiresAuth: true }
     },
+    {
+        path: '/admin/users',
+        name: 'users',
+        component: () => import('../views/admin/users/index.vue'),
+        meta: { requiresAuth: true }
+    },
+    {
+        path: '/admin/users/create',
+        name: 'user-create',
+        component: () => import('../views/admin/users/create.vue'),
+        meta: { requiresAuth: true }
+    },
+    {
+        path: '/admin/users/:id',
+        name: 'user-edit',
+        component: () => import('../views/admin/users/edit.vue'),
+        meta: { requiresAuth: true }
+    }
 ]
 
 //create router
